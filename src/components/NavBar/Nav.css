@@ -1,0 +1,14 @@
+.managePro {
+	color: #f35a64 !important;
+	cursor: pointer;
+}
+.managePro:hover {
+	color: #c24248 !important;
+}
+.manageCat:hover {
+	color: #c24248 !important;
+}
+.manageCat {
+	color: #f35a64 !important;
+	cursor: pointer;
+}

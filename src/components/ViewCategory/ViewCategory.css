@@ -1,0 +1,32 @@
+.categoryBox {
+	display: flex;
+	flex-wrap: wrap;
+	/* justify-content: space-between; */
+	gap: 25px;
+}
+.category img {
+	width: 210px;
+	height: 180px;
+	border-radius: 5px;
+	object-fit: cover;
+}
+
+.category p {
+	font-size: 24px;
+	text-align: center;
+	font-weight: 500;
+	margin: 10px 0 0 0;
+	background-color: rgba(215, 105, 105, 0.429);
+	border-radius: 5px;
+}
+.category {
+	border: 1px solid lightgray;
+	border-radius: 2px;
+	padding: 10px;
+	cursor: pointer;
+	/* background-color: white; */
+}
+.link {
+	color: #152440;
+	font-weight: bold;
+}

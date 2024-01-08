@@ -1,0 +1,34 @@
+.reg-page {
+	max-width: 800px;
+	margin: 0 auto;
+	border: 1px solid lightgray;
+	border-radius: 5px;
+	margin-bottom: 86px;
+	position: relative;
+	top: 40px;
+	background: rgba(248, 248, 248, 0.396);
+}
+
+.reg-form > div > label {
+	margin-bottom: 5px;
+}
+
+.reg-form > div > input,
+.reg-form > div > textarea {
+	color: rgb(22, 22, 22);
+}
+
+.sel-city > select {
+	color: rgb(22, 22, 22);
+}
+.password-field > input {
+	padding-right: 50px;
+}
+
+.PasswordIcon {
+	position: relative;
+	float: right;
+	top: 35px;
+	right: 16px;
+	cursor: pointer;
+}
