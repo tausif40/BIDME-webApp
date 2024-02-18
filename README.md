@@ -1,5 +1,7 @@
 # Getting Started with Create React App
 
+API of this project is available here - [BIDME--API](https://github.com/tausif40/BIDME--API.git)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
