@@ -35,6 +35,7 @@ function AddCategory() {
         <div className="container">
           <div className="col-lg-12 px-5 py-5">
             <h1 className="display-5 mb-4">Add Category <span className="text-primary">Here!!!</span></h1>
+
             <form>
               <div className="form-group pt-4">
                 <label for="catnm" className='mb-2'>Category Name</label>

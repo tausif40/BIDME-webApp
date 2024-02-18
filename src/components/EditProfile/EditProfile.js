@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { _apiurluser } from '../../Api.url';
 import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 function EditProfile() {
 
@@ -30,19 +31,19 @@ function EditProfile() {
   const handleSubmit = () => {
     let updateDetails = { "condition_obj": { "email": email }, "content_obj": { "name": name, "mobile": mobile, "address": address, "city": city, "gender": gender } };
     axios.patch(_apiurluser + "update", updateDetails).then((response) => {
-      setOutput("Profile edited successfully....");
-      navigate("/epadmin");
+      toast.success("Profile edited successfully.");
+      navigate("/admin");
+    }).catch((error) => {
+      toast.error("Profile edit failed.")
     });
   };
 
   return (
     <>
-      {/* About Start */}
-      <div className="container-fluid bg-secondary p-0">
-        <div className="row g-0">
-          <div className="col-lg-12 py-6 px-5">
-            <h1 className="display-5 mb-4">Edit Profile <span className="text-primary">Here!!!</span></h1>
-            <font color="blue">{output}</font>
+      <div className="container-fluid p-0 h-100">
+        <div className="row g-0 reg-page">
+          <div className="col-lg-12 mt-3 me-1 px-5">
+            <h1 className="display-5 mb-4 text-center">Edit Profile</h1>
             <form>
               <div className="form-group">
                 <label for="name">Name:</label>
@@ -82,13 +83,14 @@ function EditProfile() {
                 Female <input type="radio" name="gender" value="female" onChange={e => setGender(e.target.value)} />
               </div>
               <br />
-              <button type="button" onClick={handleSubmit} className="btn btn-danger" >Submit</button>
+              <center>
+                <button type="button" onClick={handleSubmit} className="btn btn-danger" >Submit</button>
+              </center>
               <br /><br />
             </form>
           </div>
         </div>
       </div>
-      {/* About End */}
     </>
   );
 }

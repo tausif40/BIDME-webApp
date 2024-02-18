@@ -19,14 +19,14 @@ function ViewCategory() {
   return (
     <>
       <div className="container-fluid bg-secondary p-0">
-        <div className="row">
+        <div className="">
           <div className="col-lg-12 pt-2 pb-6 px-5">
             <Link to="/viewCategory">
               <div className="my-4 link">Category List <span style={{ color: "gray" }}>{'>>'}</span></div>
             </Link>
             <br />
 
-            <div className="categoryBox container">
+            <div className="categoryBox">
               {
                 categoryList.map((row) => (
 

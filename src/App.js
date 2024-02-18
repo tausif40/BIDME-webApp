@@ -22,9 +22,12 @@ import User from './components/UserComponent/User';
 import ViewCategory from './components/ViewCategory/ViewCategory';
 import ViewSubCategory from './components/ViewSubCategory/ViewSubCategory';
 import Footer from './components/Footer/Footer';
+import Copyright from './components/Footer/Copyright';
 import AddProduct from './components/AddProduct/AddProduct';
 import Products from './components/Product/Products';
 import ProductDetails from './components/ProductDetails/productDetails';
+import Bidding from './components/bidding-page/bidding';
+import AuctionList from './components/AuctionList/AuctionList';
 
 function App() {
   return (
@@ -67,19 +70,17 @@ function App() {
         <Route path="/addProduct" element={<AddProduct />} ></Route>
         <Route path="/viewSubCategory/:catnm" element={<ViewSubCategory />} ></Route>
         <Route path="/products/:catnm/:subcatnm" element={<Products />} ></Route>
-        <Route path="/productDetails/:catnm/:subcatnm/:_id" element={<ProductDetails />} ></Route>
+        <Route path="/productDetails/:subcatnm/:_id/:ptitle" element={<ProductDetails />} >
+          <Route path="/productDetails/:subcatnm/:_id/:ptitle/auctionList" element={<AuctionList />} />
+        </Route>
+        <Route path="bidding/:subcatnm/:_id/:ptitle" element={<Bidding />} ></Route>
+
+        <Route path="/auctionList" element={<AuctionList />} ></Route>
       </Routes>
 
-
-      {/* Footer Start */}
-
       <Footer />
+      <Copyright />
 
-      <div class="container-fluid bg-dark text-secondary text-center border-top py-4 px-5" style={{ "border-color": "rgba(256, 256, 256, .1) !important;" }}>
-        <p class="m-0">&copy; <a class="text-secondary border-bottom" href="#">BID ME</a>. All Rights Reserved. Designed by <a class="text-secondary border-bottom" href="">BID ME</a></p>
-      </div>
-
-      {/* Footer End */}
     </>
   );
 }

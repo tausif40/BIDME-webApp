@@ -11,7 +11,6 @@ function ViewSubCategory() {
 
   useEffect(() => {
     axios.get(_apiurlsubcategory + "fetch?catnm=" + params.catnm).then((response) => {
-      console.log(response.data);
       setSubCategoryList(response.data);
     }).catch((error) => {
       console.log(error);
@@ -22,7 +21,7 @@ function ViewSubCategory() {
     <>
 
       <div className="container-fluid bg-secondary p-0">
-        <div className="row">
+        <div className="">
           <div className="col-lg-12 pt-2 pb-6 px-5">
             <div className="my-4">
               <Link to="/viewCategory"><span className='link'>Category List </span></Link>

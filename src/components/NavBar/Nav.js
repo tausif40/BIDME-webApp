@@ -58,11 +58,11 @@ function Nav() {
           <div className="collapse navbar-collapse" id="navbarCollapse">
             <div className="navbar-nav ms-auto py-0 me-n3">
               <a className="nav-item nav-link active"><Link to="/user">User Home</Link></a>
-              <a className="nav-item nav-link"><Link to="/viewCategory">Search Products</Link></a>
+              <a className="nav-item nav-link"><Link to="/viewCategory">Products</Link></a>
               <div className="nav-item dropdown">
                 <a className="nav-link dropdown-toggle managePro" data-bs-toggle="dropdown">Manage Product</a>
                 <div className="dropdown-menu m-0">
-                  <a className="dropdown-item"><Link to="/addProduct">Add Product</Link></a>
+                  <a className="dropdown-item"><Link to="/addProduct">Sell Product</Link></a>
                   <a className="dropdown-item"><Link to="/viewProduct">View Product</Link></a>
                 </div>
               </div>

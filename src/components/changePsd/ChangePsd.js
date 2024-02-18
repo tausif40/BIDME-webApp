@@ -51,16 +51,18 @@ function ChangePsd() {
   const [ confirmNewPassword, setConfirmNewPassword ] = useState();
 
   const handleSubmit = () => {
-    // const userDetails = { _id: localStorage.getItem("_id"), password: oldPassword };
-    axios.get(_apiurluser + "fetch?_id=" + localStorage.getItem("_id") + "&password=" + oldPassword).then((response) => {
+    console.log(oldPassword);
+
+    axios.get(_apiurluser + "fetch?email=" + localStorage.getItem("email") + "&password=" + oldPassword).then((response) => {
+      console.log(response.data);
       if (newPassword == confirmNewPassword) {
-        toast("password match , _id = " + localStorage.getItem("_id"))
-        let updateDetails = { condition_obj: { _id: localStorage.getItem("_id") }, content_obj: { password: confirmNewPassword } };
+        let updateDetails = { condition_obj: { email: localStorage.getItem("email") }, content_obj: { password: confirmNewPassword } };
         axios.patch(_apiurluser + "update", updateDetails).then((response) => {
           toast.success("Password changed successfully");
           setOldPassword("");
           setNewPassword("");
           setConfirmNewPassword("");
+
         }).catch((error) => {
           console.log(error);
         });
